@@ -6,7 +6,20 @@ const nextConfig = {
   // Performance optimizations
   experimental: {
     // optimizeCss: true, // Removed due to critters dependency issue
+    webpackBuildWorker: true, // Enable webpack build worker
+    outputFileTracingExcludes: {
+      '*': [
+        'public/diagrams/**/*',
+        'system-design-main/**/*',
+        'node_modules/@swc/core-linux-x64-gnu',
+        'node_modules/@swc/core-linux-x64-musl',
+        'node_modules/@esbuild/linux-x64',
+      ],
+    },
   },
+  
+  // Exclude large directories from build tracing to prevent stack overflow
+  outputFileTracing: true,
   
   // Image optimization
   images: {
