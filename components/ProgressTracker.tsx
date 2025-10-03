@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Trophy, Target, Clock, TrendingUp, CheckCircle, BookOpen } from 'lucide-react';
-import { useAnalytics } from '../../hooks/useAnalytics';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface ProgressTrackerProps {
   completedTopics: string[];

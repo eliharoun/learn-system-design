@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CheckCircle, Clock, BookOpen, Target, ChevronRight, ChevronDown } from 'lucide-react';
-import { LearningPath } from '../../types';
-import { useAnalytics } from '../../hooks/useAnalytics';
+import { LearningPath } from '../types';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface LearningPathProps {
   learningPath: LearningPath;

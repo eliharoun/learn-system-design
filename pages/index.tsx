@@ -12,9 +12,9 @@ import {
   TopicDetailModal,
   CaseStudyDetailModal
 } from '../components';
-import { TabbedTopicsSection } from '../components/enhanced/TabbedTopicsSection';
-import { LearningPathComponent } from '../components/enhanced/LearningPath';
-import { ProgressTracker } from '../components/enhanced/ProgressTracker';
+import { TabbedTopicsSection } from '../components/TabbedTopicsSection';
+import { LearningPathComponent } from '../components/LearningPath';
+import { ProgressTracker } from '../components/ProgressTracker';
 import { SEO, generateWebsiteStructuredData } from '../components/SEO';
 import { interviewSteps, topics, caseStudies, categories, resourceCategories } from '../data';
 import { learningPaths } from '../data/learningPaths';

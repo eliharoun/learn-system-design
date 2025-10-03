@@ -31,7 +31,7 @@ export const SEO: React.FC<SEOProps> = ({
   canonicalUrl,
   structuredData
 }) => {
-  const siteUrl = 'https://system-design-mastery.vercel.app';
+  const siteUrl = 'https://www.interviewpro.club';
   const fullTitle = title.includes('InterviewPro Club') ? title : `${title} | InterviewPro Club`;
   const fullCanonicalUrl = canonicalUrl || siteUrl;
 

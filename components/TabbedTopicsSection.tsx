@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Topic, CaseStudy, Category } from '../../types';
-import { TopicCard } from '../TopicCard';
-import { categories } from '../../data';
+import { Topic, CaseStudy, Category } from '../types';
+import { TopicCard } from './TopicCard';
+import { categories } from '../data';
 
 interface TabbedTopicsSectionProps {
   topics: Topic[];

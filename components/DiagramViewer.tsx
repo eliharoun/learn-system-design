@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ZoomIn, ZoomOut, Maximize2, RotateCcw } from 'lucide-react';
-import { useAnalytics } from '../../hooks/useAnalytics';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface DiagramViewerProps {
   diagramId: string;

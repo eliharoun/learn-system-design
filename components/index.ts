@@ -19,4 +19,4 @@ export { TopicDetailModal } from './modals/TopicDetailModal';
 export { CaseStudyDetailModal } from './modals/CaseStudyDetailModal';
 
 // Enhanced Components
-export { TabbedTopicsSection } from './enhanced/TabbedTopicsSection';
+export { TabbedTopicsSection } from './TabbedTopicsSection';

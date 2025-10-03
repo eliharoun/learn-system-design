@@ -2,7 +2,7 @@ import React from 'react';
 import { X, CheckCircle, BarChart3, Layers, Code, TrendingUp } from 'lucide-react';
 import { CaseStudy } from '../../types';
 import { getDifficultyBadgeColor } from '../../utils';
-import { LazyDiagramViewer } from '../enhanced/LazyDiagramViewer';
+import { LazyDiagramViewer } from '../LazyDiagramViewer';
 import { useProgress } from '../../hooks/useProgress';
 
 interface CaseStudyDetailModalProps {

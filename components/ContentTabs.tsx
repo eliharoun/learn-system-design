@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAnalytics } from '../../hooks/useAnalytics';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface ContentTab {
   id: string;

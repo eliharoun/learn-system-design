@@ -1,7 +1,7 @@
 import React from 'react';
 import { X, CheckCircle } from 'lucide-react';
 import { Topic } from '../../types';
-import { LazyDiagramViewer } from '../enhanced/LazyDiagramViewer';
+import { LazyDiagramViewer } from '../LazyDiagramViewer';
 import { useProgress } from '../../hooks/useProgress';
 import { useAnalytics } from '../../hooks/useAnalytics';
 
