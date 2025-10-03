@@ -2,10 +2,17 @@
 
 > A comprehensive system design learning platform with 46 topics, 82 interactive diagrams, and real-world case studies. Complete integration of system-design-main content for interview preparation and professional development.
 
+<div align="center">
+
+## **[🚀 Try it Live: interviewpro.club](https://www.interviewpro.club/)**
+
+</div>
+
 [![Next.js](https://img.shields.io/badge/Next.js-14.0-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.3-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com)
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-www.interviewpro.club-00D9FF?style=for-the-badge&logo=vercel)](https://www.interviewpro.club/)
 
 ## 🌟 What is System Design Mastery?
 
@@ -153,12 +160,23 @@ npm run lint         # Run code linting
 
 ---
 
+## 🙏 Acknowledgments
+
+This project builds upon excellent work from the system design community:
+
+- **[System Design by Karan Pratap Singh](https://github.com/karanpratapsingh/system-design)** - Comprehensive system design guide and diagrams
+- **[Grokking Modern System Design Interview](https://www.educative.io/courses/grokking-the-system-design-interview)** - Interview methodology and case study approaches
+
+Special thanks to the open source community for creating valuable educational resources that make learning system design accessible to everyone.
+
+---
+
 <div align="center">
 
 **⭐ Star this repository if it helps you master system design!**
 
 **🚀 Ready to become a system design expert?**
 
-[**Start Learning →**](http://localhost:3000)
+[**Start Learning →**](https://www.interviewpro.club/)
 
 </div>
