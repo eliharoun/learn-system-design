@@ -1,8 +1,5 @@
 # Vercel ignore file to prevent build issues with large asset directories
 
-# System design source files (not needed for deployment)
-system-design-main/
-
 # Development files
 *.md
 !README.md
