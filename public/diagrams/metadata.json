@@ -1,0 +1,240 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2025-10-03T04:03:47.269Z",
+  "totalDiagrams": 81,
+  "description": "System Design diagrams mapped to topics based on README.md content",
+  "mappings": {
+    "performance-scalability": [
+      "scalability"
+    ],
+    "cap-theorem": [
+      "cap-theorem"
+    ],
+    "osi-model": [
+      "osi-model"
+    ],
+    "tcp-udp": [
+      "tcp",
+      "udp"
+    ],
+    "dns": [
+      "how-dns-works"
+    ],
+    "load-balancing": [
+      "load-balancer",
+      "load-balancer-layers",
+      "redundant-load-balancer"
+    ],
+    "clustering": [
+      "cluster",
+      "active-active",
+      "active-passive"
+    ],
+    "sql-nosql": [
+      "database-types"
+    ],
+    "database-indexes": [
+      "indexes",
+      "dense-index",
+      "sparse-index"
+    ],
+    "database-replication": [
+      "master-slave-replication",
+      "master-master-replication"
+    ],
+    "pacelc-theorem": [
+      "pacelc-theorem"
+    ],
+    "transactions": [
+      "transaction-states"
+    ],
+    "distributed-transactions": [
+      "two-phase-commit",
+      "three-phase-commit",
+      "sagas"
+    ],
+    "sharding": [
+      "sharding",
+      "simple-hashing"
+    ],
+    "database-federation": [
+      "database-federation"
+    ],
+    "monoliths-microservices": [
+      "monolith",
+      "microservices",
+      "architecture-range"
+    ],
+    "n-tier-architecture": [
+      "n-tier-architecture"
+    ],
+    "message-brokers": [
+      "message-broker"
+    ],
+    "pubsub": [
+      "publish-subscribe"
+    ],
+    "event-driven-architecture": [
+      "event-driven-architecture"
+    ],
+    "api-gateway": [
+      "api-gateway",
+      "backend-for-frontend"
+    ],
+    "caching": [
+      "caching",
+      "write-through-cache",
+      "write-around-cache",
+      "write-back-cache",
+      "distributed-cache",
+      "global-cache"
+    ],
+    "cdn": [
+      "cdn-map",
+      "cdn"
+    ],
+    "consistent-hashing": [
+      "consistent-hashing",
+      "virtual-nodes"
+    ],
+    "circuit-breaker": [
+      "circuit-breaker"
+    ],
+    "oauth-openid": [
+      "oauth2"
+    ],
+    "rate-limiting": [
+      "rate-limiting"
+    ],
+    "service-discovery": [
+      "client-side-service-discovery",
+      "server-side-service-discovery"
+    ],
+    "geohashing-quadtrees": [
+      "geohashing",
+      "quadtree",
+      "quadtree-subdivision"
+    ],
+    "sso": [
+      "sso"
+    ],
+    "disaster-recovery": [
+      "disaster-recovery"
+    ],
+    "virtualization-containerization": [
+      "virtualization-vs-containerization"
+    ],
+    "event-sourcing": [
+      "event-sourcing"
+    ],
+    "cqrs": [
+      "command-and-query-responsibility-segregation"
+    ],
+    "enterprise-service-bus": [
+      "enterprise-service-bus"
+    ],
+    "proxy": [
+      "forward-proxy",
+      "reverse-proxy"
+    ],
+    "long-polling-websockets-sse": [
+      "long-polling",
+      "websockets",
+      "server-sent-events"
+    ],
+    "url-shortener": [
+      "url-shortener-datamodel",
+      "url-shortener-basic-design",
+      "url-shortener-advanced-design"
+    ],
+    "whatsapp": [
+      "whatsapp-datamodel",
+      "whatsapp-basic-design",
+      "whatsapp-advanced-design"
+    ],
+    "twitter": [
+      "twitter-datamodel",
+      "newsfeed-pull-model",
+      "newsfeed-push-model",
+      "twitter-advanced-design"
+    ],
+    "netflix": [
+      "netflix-datamodel",
+      "video-processing-pipeline",
+      "file-chunking",
+      "netflix-advanced-design"
+    ],
+    "uber": [
+      "uber-datamodel",
+      "uber-working",
+      "uber-advanced-design"
+    ]
+  },
+  "categories": {
+    "Fundamentals": [
+      "performance-scalability",
+      "cap-theorem",
+      "osi-model",
+      "tcp-udp"
+    ],
+    "Networking": [
+      "dns",
+      "load-balancing",
+      "clustering"
+    ],
+    "Databases": [
+      "sql-nosql",
+      "database-indexes",
+      "database-replication",
+      "pacelc-theorem",
+      "transactions",
+      "distributed-transactions",
+      "sharding",
+      "database-federation"
+    ],
+    "Architecture": [
+      "monoliths-microservices",
+      "n-tier-architecture",
+      "message-brokers",
+      "pubsub",
+      "event-driven-architecture",
+      "api-gateway"
+    ],
+    "Components": [
+      "caching",
+      "cdn",
+      "consistent-hashing"
+    ],
+    "Best Practices": [
+      "circuit-breaker",
+      "oauth-openid",
+      "rate-limiting",
+      "service-discovery",
+      "geohashing-quadtrees"
+    ],
+    "Advanced": [
+      "sso",
+      "disaster-recovery",
+      "virtualization-containerization",
+      "event-sourcing",
+      "cqrs",
+      "enterprise-service-bus",
+      "proxy",
+      "long-polling-websockets-sse"
+    ],
+    "Case Studies": [
+      "url-shortener",
+      "whatsapp",
+      "twitter",
+      "netflix",
+      "uber"
+    ]
+  },
+  "imageStats": {
+    "totalAvailable": 82,
+    "totalMapped": 81,
+    "unmappedImages": [
+      "message-queue"
+    ]
+  }
+}
