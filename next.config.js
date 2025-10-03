@@ -18,8 +18,8 @@ const nextConfig = {
     },
   },
   
-  // Exclude large directories from build tracing to prevent stack overflow
-  outputFileTracing: true,
+  // Disable output file tracing to prevent stack overflow with large asset count
+  outputFileTracing: false,
   
   // Image optimization
   images: {
