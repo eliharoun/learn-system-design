@@ -1,6 +1,7 @@
 import React from 'react';
 import { Search } from 'lucide-react';
 import { Category } from '../../types';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface HeroSectionProps {
   searchQuery: string;
@@ -17,6 +18,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   setSelectedCategory,
   categories
 }) => {
+  const { trackEvent } = useAnalytics();
+
+  const handleCategoryChange = (category: Category) => {
+    trackEvent('category_filter', 'navigation', category);
+    setSelectedCategory(category);
+  };
+
+  const handleSearchChange = (query: string) => {
+    if (query.length > 2) {
+      trackEvent('search', 'navigation', query);
+    }
+    setSearchQuery(query);
+  };
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10" />
@@ -38,7 +52,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               type="text"
               placeholder="Search topics and case studies..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleSearchChange(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
             />
           </div>
@@ -49,7 +63,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => handleCategoryChange(category)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/50'

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ZoomIn, ZoomOut, Maximize2, RotateCcw } from 'lucide-react';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface DiagramViewerProps {
   diagramId: string;
@@ -18,6 +19,7 @@ export const DiagramViewer: React.FC<DiagramViewerProps> = ({
   className = '',
   maxWidth = '100%'
 }) => {
+  const { trackDiagramView, trackEvent } = useAnalytics();
   const [zoom, setZoom] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -36,17 +38,25 @@ export const DiagramViewer: React.FC<DiagramViewerProps> = ({
     setPosition({ x: 0, y: 0 });
     setIsLoading(true);
     setError(null);
-  }, [diagramId]);
+    
+    // Track diagram view
+    if (diagramId && title) {
+      trackDiagramView(`${diagramId}: ${title}`);
+    }
+  }, [diagramId, title, trackDiagramView]);
 
   const handleZoomIn = () => {
+    trackEvent('diagram_zoom_in', 'diagram_interaction', diagramId);
     setZoom(prev => Math.min(prev * 1.2, 3));
   };
 
   const handleZoomOut = () => {
+    trackEvent('diagram_zoom_out', 'diagram_interaction', diagramId);
     setZoom(prev => Math.max(prev / 1.2, 0.5));
   };
 
   const handleReset = () => {
+    trackEvent('diagram_reset', 'diagram_interaction', diagramId);
     setZoom(1);
     setPosition({ x: 0, y: 0 });
   };
@@ -92,6 +102,7 @@ export const DiagramViewer: React.FC<DiagramViewerProps> = ({
   };
 
   const handleFullscreen = () => {
+    trackEvent('diagram_fullscreen', 'diagram_interaction', diagramId);
     // This would open the diagram in a fullscreen modal
     // For now, just log the action
     console.log(`Opening ${title} in fullscreen`);

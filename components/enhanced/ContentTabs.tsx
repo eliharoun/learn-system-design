@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface ContentTab {
   id: string;
@@ -22,7 +23,13 @@ export const ContentTabs: React.FC<ContentTabsProps> = ({
   tabClassName = '',
   contentClassName = ''
 }) => {
+  const { trackEvent } = useAnalytics();
   const [activeTab, setActiveTab] = useState(defaultTab || tabs[0]?.id || '');
+
+  const handleTabChange = (tabId: string, tabLabel: string) => {
+    trackEvent('tab_change', 'navigation', tabLabel);
+    setActiveTab(tabId);
+  };
 
   const activeTabContent = tabs.find(tab => tab.id === activeTab)?.content;
 
@@ -34,7 +41,7 @@ export const ContentTabs: React.FC<ContentTabsProps> = ({
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabChange(tab.id, tab.label)}
               className={`
                 group inline-flex items-center py-2 px-1 border-b-2 font-medium text-sm transition-colors duration-200
                 ${activeTab === tab.id

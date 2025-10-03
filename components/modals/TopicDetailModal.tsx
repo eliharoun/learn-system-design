@@ -3,6 +3,7 @@ import { X, CheckCircle } from 'lucide-react';
 import { Topic } from '../../types';
 import { LazyDiagramViewer } from '../enhanced/LazyDiagramViewer';
 import { useProgress } from '../../hooks/useProgress';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface TopicDetailModalProps {
   topic: Topic;
@@ -11,14 +12,26 @@ interface TopicDetailModalProps {
 
 export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({ topic, onClose }) => {
   const progress = useProgress();
+  const { trackEvent } = useAnalytics();
   const Icon = topic.icon;
+
+  const handleClose = () => {
+    trackEvent('modal_close', 'topic_detail', topic.title);
+    onClose();
+  };
+
+  const handleMarkComplete = () => {
+    trackEvent('topic_completed', 'learning_progress', topic.title);
+    progress.markTopicCompleted(topic.id);
+    onClose();
+  };
   
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 backdrop-blur-sm animate-fadeIn">
       <div className="bg-gray-900 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-gray-800 shadow-2xl">
         <div className={`bg-gradient-to-br ${topic.color} p-8 relative`}>
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className="absolute top-4 right-4 p-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition-all"
           >
             <X className="w-6 h-6 text-white" />
@@ -99,10 +112,7 @@ export const TopicDetailModal: React.FC<TopicDetailModalProps> = ({ topic, onClo
         {/* Completion Button */}
         <div className="border-t border-gray-700 p-6 bg-gray-800/50">
           <button
-            onClick={() => {
-              progress.markTopicCompleted(topic.id);
-              onClose();
-            }}
+            onClick={handleMarkComplete}
             className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
               progress.isTopicCompleted(topic.id)
                 ? 'bg-green-500/20 border-2 border-green-500 text-green-400 cursor-default'

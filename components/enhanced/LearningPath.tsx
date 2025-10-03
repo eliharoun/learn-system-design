@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CheckCircle, Clock, BookOpen, Target, ChevronRight, ChevronDown } from 'lucide-react';
 import { LearningPath } from '../../types';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface LearningPathProps {
   learningPath: LearningPath;
@@ -17,7 +18,24 @@ export const LearningPathComponent: React.FC<LearningPathProps> = ({
   onTopicClick,
   onCaseStudyClick
 }) => {
+  const { trackEvent } = useAnalytics();
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleExpand = () => {
+    const newExpanded = !isExpanded;
+    trackEvent(newExpanded ? 'learning_path_expand' : 'learning_path_collapse', 'learning_path', learningPath.title);
+    setIsExpanded(newExpanded);
+  };
+
+  const handleTopicClick = (topicId: string) => {
+    trackEvent('learning_path_topic_click', 'learning_path', `${learningPath.title} - ${topicId}`);
+    onTopicClick(topicId);
+  };
+
+  const handleCaseStudyClick = (caseStudyId: string) => {
+    trackEvent('learning_path_case_study_click', 'learning_path', `${learningPath.title} - ${caseStudyId}`);
+    onCaseStudyClick(caseStudyId);
+  };
   
   const completedTopicsCount = learningPath.topics.filter(id => completedTopics.includes(id)).length;
   const completedCaseStudiesCount = learningPath.caseStudies.filter(id => completedCaseStudies.includes(id)).length;
@@ -57,7 +75,7 @@ export const LearningPathComponent: React.FC<LearningPathProps> = ({
             </div>
           </div>
           <button
-            onClick={() => setIsExpanded(!isExpanded)}
+            onClick={handleExpand}
             className="p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors"
           >
             {isExpanded ? (
@@ -128,7 +146,7 @@ export const LearningPathComponent: React.FC<LearningPathProps> = ({
                   return (
                     <button
                       key={topicId}
-                      onClick={() => onTopicClick(topicId)}
+                      onClick={() => handleTopicClick(topicId)}
                       className={`flex items-center space-x-3 p-3 rounded-lg border transition-all ${
                         isCompleted 
                           ? 'bg-green-500/20 border-green-500/50 text-green-400' 
@@ -167,7 +185,7 @@ export const LearningPathComponent: React.FC<LearningPathProps> = ({
                   return (
                     <button
                       key={caseStudyId}
-                      onClick={() => onCaseStudyClick(caseStudyId)}
+                      onClick={() => handleCaseStudyClick(caseStudyId)}
                       className={`flex items-center space-x-3 p-3 rounded-lg border transition-all ${
                         isCompleted 
                           ? 'bg-green-500/20 border-green-500/50 text-green-400' 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { InterviewStep } from '../types';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface InterviewStepCardProps {
   step: InterviewStep;
@@ -15,7 +16,13 @@ export const InterviewStepCard: React.FC<InterviewStepCardProps> = ({
   isVisible, 
   onClick 
 }) => {
+  const { trackEvent } = useAnalytics();
   const Icon = step.icon;
+
+  const handleClick = () => {
+    trackEvent('interview_step_view', 'interview_process', `Step ${step.step}: ${step.title}`);
+    onClick(step);
+  };
   
   return (
     <div
@@ -23,7 +30,7 @@ export const InterviewStepCard: React.FC<InterviewStepCardProps> = ({
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
-      onClick={() => onClick(step)}
+      onClick={handleClick}
     >
       <div className="bg-gray-900 rounded-xl p-6 h-full">
         <div className="flex items-center justify-between mb-4">

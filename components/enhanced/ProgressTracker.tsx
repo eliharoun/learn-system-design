@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Trophy, Target, Clock, TrendingUp, CheckCircle, BookOpen } from 'lucide-react';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface ProgressTrackerProps {
   completedTopics: string[];
@@ -20,7 +21,12 @@ export const ProgressTracker: React.FC<ProgressTrackerProps> = ({
   currentStreak,
   achievements
 }) => {
+  const { trackEvent } = useAnalytics();
   const [isHydrated, setIsHydrated] = useState(false);
+
+  const handleViewAllAchievements = () => {
+    trackEvent('view_all_achievements', 'progress', 'achievements_button');
+  };
 
   useEffect(() => {
     setIsHydrated(true);
@@ -168,7 +174,10 @@ export const ProgressTracker: React.FC<ProgressTrackerProps> = ({
             ))}
           </div>
           {achievements.length > 3 && (
-            <button className="text-sm text-blue-400 hover:text-blue-300 mt-2">
+            <button 
+              onClick={handleViewAllAchievements}
+              className="text-sm text-blue-400 hover:text-blue-300 mt-2"
+            >
               View all {achievements.length} achievements
             </button>
           )}

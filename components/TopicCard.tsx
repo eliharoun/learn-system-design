@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { Topic, CaseStudy } from '../types';
 import { isCaseStudy, getDifficultyColor } from '../utils';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface TopicCardProps {
   item: Topic | CaseStudy;
@@ -16,8 +17,14 @@ export const TopicCard: React.FC<TopicCardProps> = ({
   isVisible, 
   onClick 
 }) => {
+  const { trackTopicView } = useAnalytics();
   const Icon = item.icon;
   const isCase = 'difficulty' in item;
+
+  const handleClick = () => {
+    trackTopicView(item.title);
+    onClick(item);
+  };
   
   return (
     <div
@@ -25,7 +32,7 @@ export const TopicCard: React.FC<TopicCardProps> = ({
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
       style={{ transitionDelay: `${index * 50}ms` }}
-      onClick={() => onClick(item)}
+      onClick={handleClick}
     >
       <div className="bg-gray-900 rounded-xl p-6 h-full">
         <div className="flex items-start justify-between mb-4">

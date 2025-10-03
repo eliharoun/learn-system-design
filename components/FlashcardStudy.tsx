@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, RotateCcw, BookOpen } from 'lucide-react';
 import { Flashcard } from '../data/flashcards';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface FlashcardStudyProps {
   flashcards: Flashcard[];
@@ -8,6 +9,7 @@ interface FlashcardStudyProps {
 }
 
 export const FlashcardStudy: React.FC<FlashcardStudyProps> = ({ flashcards, categories }) => {
+  const { trackFlashcardInteraction, trackEvent, trackProgressUpdate } = useAnalytics();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -30,9 +32,21 @@ export const FlashcardStudy: React.FC<FlashcardStudyProps> = ({ flashcards, cate
     setStudiedCards(new Set());
   }, [selectedCategory]);
 
+  const handleCategoryChange = (category: string) => {
+    trackEvent('category_change', 'flashcards', category);
+    setSelectedCategory(category);
+  };
+
   const handleNext = () => {
     if (currentCard) {
+      trackFlashcardInteraction('next', currentCard.term);
       setStudiedCards(prev => new Set([...prev, currentCard.id]));
+      
+      // Track progress milestones
+      const newProgress = Math.round(((currentIndex + 2) / totalCards) * 100);
+      if (newProgress % 25 === 0) {
+        trackProgressUpdate(`flashcards_${selectedCategory}`, newProgress);
+      }
     }
     if (currentIndex < totalCards - 1) {
       setCurrentIndex(currentIndex + 1);
@@ -42,16 +56,23 @@ export const FlashcardStudy: React.FC<FlashcardStudyProps> = ({ flashcards, cate
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
+      if (currentCard) {
+        trackFlashcardInteraction('previous', currentCard.term);
+      }
       setCurrentIndex(currentIndex - 1);
       setIsFlipped(false);
     }
   };
 
   const handleFlip = () => {
+    if (currentCard) {
+      trackFlashcardInteraction('flip', currentCard.term);
+    }
     setIsFlipped(!isFlipped);
   };
 
   const handleReset = () => {
+    trackEvent('reset_progress', 'flashcards', selectedCategory, studiedCards.size);
     setCurrentIndex(0);
     setIsFlipped(false);
     setStudiedCards(new Set());
@@ -77,7 +98,7 @@ export const FlashcardStudy: React.FC<FlashcardStudyProps> = ({ flashcards, cate
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'

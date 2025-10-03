@@ -2,6 +2,7 @@ import React from 'react';
 import { ExternalLink, Star } from 'lucide-react';
 import { ResourceCategory } from '../../data/resources';
 import { Category } from '../../types';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface ResourcesSectionProps {
   resourceCategories: ResourceCategory[];
@@ -14,6 +15,12 @@ export const ResourcesSection: React.FC<ResourcesSectionProps> = ({
   isVisible,
   selectedCategory
 }) => {
+  const { trackResourceClick } = useAnalytics();
+
+  const handleResourceClick = (resourceTitle: string, categoryTitle: string, url: string) => {
+    trackResourceClick(resourceTitle, categoryTitle);
+  };
+
   // Only show resources section when Resources category is selected
   if (selectedCategory !== 'Resources') {
     return null;
@@ -57,6 +64,7 @@ export const ResourcesSection: React.FC<ResourcesSectionProps> = ({
                       href={resource.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => handleResourceClick(resource.title, category.title, resource.url)}
                       className="block p-4 bg-gray-800 bg-opacity-50 rounded-lg hover:bg-opacity-70 transition-all duration-200 group/resource"
                     >
                       <div className="flex items-start justify-between">
