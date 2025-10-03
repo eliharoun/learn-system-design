@@ -1,4 +1,4 @@
-# 🚀 System Design Mastery
+# 🚀 InterviewPro Club
 
 > A comprehensive system design learning platform with 46 topics, 82 interactive diagrams, and real-world case studies. Complete integration of system-design-main content for interview preparation and professional development.
 
@@ -14,9 +14,9 @@
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com)
 [![Live Site](https://img.shields.io/badge/🌐_Live_Site-www.interviewpro.club-00D9FF?style=for-the-badge&logo=vercel)](https://www.interviewpro.club/)
 
-## 🌟 What is System Design Mastery?
+## 🌟 What is InterviewPro Club?
 
-System Design Mastery is a comprehensive learning platform that helps you master system design concepts through interactive content, visual diagrams, and real-world case studies. Whether you're preparing for technical interviews or advancing your engineering skills, this platform provides everything you need to understand how large-scale systems are built and operated.
+InterviewPro Club is a comprehensive learning platform that helps you master system design concepts through interactive content, visual diagrams, and real-world case studies. Whether you're preparing for technical interviews or advancing your engineering skills, this platform provides everything you need to understand how large-scale systems are built and operated.
 
 ## 📚 Platform Sections
 
