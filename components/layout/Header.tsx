@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ mobileMenuOpen, setMobileMenuOpe
                 <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   InterviewPro Club
                 </h1>
-              <p className="text-xs text-gray-400">Learn to build scalable systems</p>
+              <p className="text-xs text-gray-400">Learn System Design & Ace Interviews</p>
             </div>
           </div>
           

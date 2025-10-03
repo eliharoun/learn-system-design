@@ -12,7 +12,7 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = 'System Design Mastery - Learn System Design & Ace Interviews',
+  title = 'InterviewPro Club - Learn System Design & Ace Interviews',
   description = 'Master system design with comprehensive topics, real-world case studies, and interactive diagrams. Perfect for interview preparation and professional development.',
   keywords = [
     'system design',
@@ -32,7 +32,7 @@ export const SEO: React.FC<SEOProps> = ({
   structuredData
 }) => {
   const siteUrl = 'https://system-design-mastery.vercel.app';
-  const fullTitle = title.includes('System Design Mastery') ? title : `${title} | System Design Mastery`;
+  const fullTitle = title.includes('InterviewPro Club') ? title : `${title} | InterviewPro Club`;
   const fullCanonicalUrl = canonicalUrl || siteUrl;
 
   return (
@@ -41,7 +41,7 @@ export const SEO: React.FC<SEOProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content="System Design Mastery" />
+      <meta name="author" content="InterviewPro Club" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={fullCanonicalUrl} />
@@ -54,7 +54,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={`${siteUrl}${ogImage}`} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="System Design Mastery" />
+      <meta property="og:site_name" content="InterviewPro Club" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter Card Tags */}
@@ -102,17 +102,17 @@ export const generateTopicStructuredData = (topic: any) => ({
   "description": topic.description,
   "author": {
     "@type": "Organization",
-    "name": "System Design Mastery"
+    "name": "InterviewPro Club"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "System Design Mastery"
+    "name": "InterviewPro Club"
   },
   "datePublished": new Date().toISOString(),
   "dateModified": new Date().toISOString(),
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://system-design-mastery.vercel.app/topics/${topic.id}`
+    "@id": `https://www.interviewpro.club/topics/${topic.id}`
   }
 });
 
@@ -123,29 +123,29 @@ export const generateCaseStudyStructuredData = (caseStudy: any) => ({
   "description": caseStudy.description,
   "author": {
     "@type": "Organization",
-    "name": "System Design Mastery"
+    "name": "InterviewPro Club"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "System Design Mastery"
+    "name": "InterviewPro Club"
   },
   "datePublished": new Date().toISOString(),
   "dateModified": new Date().toISOString(),
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://system-design-mastery.vercel.app/case-studies/${caseStudy.id}`
+    "@id": `https://www.interviewpro.club/case-studies/${caseStudy.id}`
   }
 });
 
 export const generateWebsiteStructuredData = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "System Design Mastery",
+  "name": "InterviewPro Club",
   "description": "Master system design with comprehensive topics, real-world case studies, and interactive diagrams.",
-  "url": "https://system-design-mastery.vercel.app",
+  "url": "https://www.interviewpro.club",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://system-design-mastery.vercel.app/?search={search_term_string}",
+    "target": "https://www.interviewpro.club/?search={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 });
