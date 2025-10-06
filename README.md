@@ -1,6 +1,6 @@
 # 🚀 InterviewPro Club
 
-> A comprehensive system design learning platform with 46 topics, 82 interactive diagrams, and real-world case studies. Complete integration of system-design-main content for interview preparation and professional development.
+> A comprehensive system design and GenAI learning platform with 60+ topics, 82 interactive diagrams, and real-world case studies. Complete integration of system design and LLM/GenAI content for modern technical interview preparation.
 
 <div align="center">
 
@@ -16,7 +16,7 @@
 
 ## 🌟 What is InterviewPro Club?
 
-InterviewPro Club is a comprehensive learning platform that helps you master system design concepts through interactive content, visual diagrams, and real-world case studies. Whether you're preparing for technical interviews or advancing your engineering skills, this platform provides everything you need to understand how large-scale systems are built and operated.
+InterviewPro Club is a comprehensive learning platform that helps you master both system design and GenAI/LLM concepts through interactive content, visual diagrams, and real-world case studies. Whether you're preparing for technical interviews at AI-first companies or advancing your engineering skills in the modern AI era, this platform provides everything you need to understand how large-scale systems and AI applications are built and operated.
 
 ## 📚 Platform Sections
 
@@ -59,6 +59,34 @@ Industry best practices and security:
 - Single Sign-On (SSO), Disaster Recovery, Rate Limiting
 - SLA/SLO/SLI, SSL/TLS/mTLS
 
+### 🤖 **GenAI & LLM Topics** (8 Topics)
+Comprehensive coverage of Large Language Models and Generative AI:
+
+#### **GenAI & LLM** (8 topics)
+Modern AI and machine learning concepts for technical interviews:
+- **Transformer Architecture** - Core architecture with attention mechanisms and Q/K/V vectors
+- **Attention Mechanisms** - Self-attention, multi-head attention, and positional encodings
+- **Tokenization & Embeddings** - BPE, SentencePiece, WordPiece, and vector representations
+- **Sampling Strategies** - Temperature, Top-K, and Top-P sampling for output control
+- **Prompt Engineering** - Zero-shot, few-shot, Chain-of-Thought, and role-based prompting
+- **Fine-Tuning & PEFT** - LoRA, QLoRA, adapters, and parameter-efficient techniques
+- **RAG Systems** - Retrieval-Augmented Generation for grounding LLMs in external knowledge
+- **Agentic AI Systems** - ReAct, CodeAct patterns, multi-agent coordination, and MCP
+
+### ⚙️ **LLMOps Topics** (7 Topics)
+Production deployment and operational practices for LLM systems:
+
+#### **LLMOps** (7 topics)
+Operational excellence for AI systems in production:
+- **LLM Deployment Strategies** - Docker containerization, FastAPI, and Kubernetes orchestration
+- **Monitoring & Observability** - Data/model drift detection and performance tracking
+- **CI/CD for GenAI** - Automated pipelines, versioning, and A/B testing for AI systems
+- **Model Optimization** - Quantization, pruning, distillation, and inference optimization
+- **Hallucination Detection** - RAGAS, G-Eval, and mitigation strategies for reliable AI
+- **Safety & Alignment** - RLHF, guardrails, red-teaming, and responsible AI practices
+- **Vector Databases** - Pinecone, Weaviate, Chroma for RAG and similarity search
+- **Privacy & Compliance** - GDPR, security best practices, and regulatory compliance
+
 ### 🏗️ **Case Studies** (11 Real-World Systems)
 Deep dives into how major tech companies built their systems:
 
@@ -74,7 +102,7 @@ Deep dives into how major tech companies built their systems:
 - **API Rate Limiter** - Request throttling system
 - **Web Crawler** - Large-scale web indexing system
 
-### 🎓 **Interview Process** (7-Step Methodology)
+### � **Interview Process** (7-Step Methodology)
 Master the systematic approach used at top tech companies:
 1. **Requirements Clarification** - Define scope and goals
 2. **System Interface Definition** - Define APIs and interfaces

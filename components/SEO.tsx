@@ -13,7 +13,7 @@ interface SEOProps {
 
 export const SEO: React.FC<SEOProps> = ({
   title = 'InterviewPro Club - Learn System Design & Ace Interviews',
-  description = 'Master system design with comprehensive topics, real-world case studies, and interactive diagrams. Perfect for interview preparation and professional development.',
+  description = 'Master system design, GenAI, and LLMOps with comprehensive topics, real-world case studies, and interactive diagrams. Learn everything from distributed systems to transformer architecture, RAG systems, and AI deployment strategies. Perfect for interview preparation and professional development.',
   keywords = [
     'system design',
     'software architecture',
@@ -24,7 +24,29 @@ export const SEO: React.FC<SEOProps> = ({
     'system design interview',
     'software engineering',
     'tech interview prep',
-    'system architecture'
+    'system architecture',
+    'generative ai',
+    'large language models',
+    'llm',
+    'transformer architecture',
+    'attention mechanisms',
+    'prompt engineering',
+    'rag systems',
+    'retrieval augmented generation',
+    'fine tuning',
+    'llmops',
+    'model deployment',
+    'ai safety',
+    'hallucination detection',
+    'vector databases',
+    'agentic ai',
+    'model context protocol',
+    'mcp',
+    'ai monitoring',
+    'model optimization',
+    'quantization',
+    'peft',
+    'lora'
   ],
   ogImage = '/og-image.png',
   ogType = 'website',
@@ -141,7 +163,7 @@ export const generateWebsiteStructuredData = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "InterviewPro Club",
-  "description": "Master system design with comprehensive topics, real-world case studies, and interactive diagrams.",
+  "description": "Master system design, GenAI, and LLMOps with comprehensive topics, real-world case studies, and interactive diagrams. Learn everything from distributed systems to transformer architecture, RAG systems, and AI deployment strategies.",
   "url": "https://www.interviewpro.club",
   "potentialAction": {
     "@type": "SearchAction",

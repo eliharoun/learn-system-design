@@ -66,7 +66,41 @@ export const flashcards: Flashcard[] = [
   // Security Category
   { id: 'security-1', term: 'Authentication', definition: 'Process of determining whether someone or something is who or what it declares itself to be (e.g., checking a password).', category: 'Security' },
   { id: 'security-2', term: 'OAuth 2', definition: 'A standard for access delegation (not authentication). The client gets a token from an authorization server, then uses that token to access a resource server.', category: 'Security' },
-  { id: 'security-3', term: 'What does digital signature provide', definition: 'Integrity (data has not been tampered with) and Authentication (proves the sender\'s identity).', category: 'Security' }
+  { id: 'security-3', term: 'What does digital signature provide', definition: 'Integrity (data has not been tampered with) and Authentication (proves the sender\'s identity).', category: 'Security' },
+
+  // GenAI & LLM Category
+  { id: 'genai-1', term: 'Self-attention vectors', definition: 'Query (Q), Key (K), and Value (V) vectors that enable contextual relationship modeling in transformers.', category: 'GenAI' },
+  { id: 'genai-2', term: 'Transformer architecture advantage', definition: 'Parallel processing enables faster training compared to RNNs, and can model long-range dependencies effectively.', category: 'GenAI' },
+  { id: 'genai-3', term: 'Positional encodings purpose', definition: 'Provide sequence order information to the permutation-invariant self-attention mechanism.', category: 'GenAI' },
+  { id: 'genai-4', term: 'Temperature sampling', definition: 'Controls randomness in token selection. Low temp (0.1-0.3) = deterministic, high temp (0.7-1.0) = creative.', category: 'GenAI' },
+  { id: 'genai-5', term: 'Top-P (Nucleus) sampling', definition: 'Dynamically selects smallest set of tokens whose cumulative probability exceeds P (e.g., 0.9).', category: 'GenAI' },
+  { id: 'genai-6', term: 'Chain-of-Thought (CoT)', definition: 'Prompting technique that encourages step-by-step reasoning by including "Let\'s think step by step" in prompts.', category: 'GenAI' },
+  { id: 'genai-7', term: 'Few-shot learning', definition: 'Providing 2-5 examples in the prompt to demonstrate the desired task format and approach.', category: 'GenAI' },
+  { id: 'genai-8', term: 'LoRA (Low-Rank Adaptation)', definition: 'PEFT technique that injects trainable low-rank matrices into transformer layers, reducing parameters by 10,000x.', category: 'GenAI' },
+  { id: 'genai-9', term: 'QLoRA advantage', definition: 'Combines LoRA with 4-bit quantization, enabling 10x memory reduction compared to full fine-tuning.', category: 'GenAI' },
+  { id: 'genai-10', term: 'RAG hallucination reduction', definition: 'Retrieval-Augmented Generation reduces hallucinations by up to 71% on average by grounding responses in trusted sources.', category: 'GenAI' },
+  { id: 'genai-11', term: 'ReAct pattern', definition: 'Agentic design pattern that interleaves reasoning and action through thought-action-observation cycles.', category: 'GenAI' },
+  { id: 'genai-12', term: 'MCP (Model Context Protocol)', definition: 'Open standard for standardizing AI model interaction with external tools, described as "USB-C for AI applications."', category: 'GenAI' },
+  { id: 'genai-13', term: 'BPE tokenization', definition: 'Byte-Pair Encoding iteratively merges frequent character pairs, achieving 3-4 chars/token compression ratio.', category: 'GenAI' },
+  { id: 'genai-14', term: 'Multi-head attention benefit', definition: 'Captures different types of relationships in parallel - one head for syntax, another for semantics.', category: 'GenAI' },
+  { id: 'genai-15', term: 'Context window limitation', definition: 'Maximum tokens (input + output) a model can process. GPT-3: 2048 tokens, modern models: 2K-10M tokens.', category: 'GenAI' },
+
+  // LLMOps Category
+  { id: 'llmops-1', term: 'Model drift impact', definition: 'Models unchanged for 6+ months see 35% error rate increase on new data due to environmental changes.', category: 'LLMOps' },
+  { id: 'llmops-2', term: 'Data drift detection', definition: 'Uses statistical methods like Population Stability Index (PSI) and KL Divergence to detect input distribution changes.', category: 'LLMOps' },
+  { id: 'llmops-3', term: 'Docker containerization benefit', definition: 'Solves "it works on my machine" problems by packaging model, dependencies, and runtime into consistent containers.', category: 'LLMOps' },
+  { id: 'llmops-4', term: 'FastAPI advantages', definition: 'High-performance async APIs with automatic documentation, validation, and interactive Swagger UI.', category: 'LLMOps' },
+  { id: 'llmops-5', term: 'Kubernetes orchestration', definition: 'Automates container deployment, scaling, and management with features like auto-scaling and health checks.', category: 'LLMOps' },
+  { id: 'llmops-6', term: 'A/B testing for models', definition: 'Splits traffic between model versions to measure performance before full deployment, enabling data-driven decisions.', category: 'LLMOps' },
+  { id: 'llmops-7', term: 'Model versioning importance', definition: 'Tracks code, data, and model versions for reproducibility and rollback capabilities in ML systems.', category: 'LLMOps' },
+  { id: 'llmops-8', term: 'Quantization benefits', definition: 'Reduces numerical precision (FP32→INT8) achieving 4-10x memory reduction with 95-99% accuracy retention.', category: 'LLMOps' },
+  { id: 'llmops-9', term: 'KV caching', definition: 'Stores attention key-value vectors for reuse in autoregressive generation, dramatically reducing computational overhead.', category: 'LLMOps' },
+  { id: 'llmops-10', term: 'RAGAS metrics', definition: 'RAG evaluation suite providing Faithfulness (claims supported by context) and Answer Relevancy scores.', category: 'LLMOps' },
+  { id: 'llmops-11', term: 'Vector database purpose', definition: 'Specialized storage for high-dimensional embeddings with fast similarity search (sub-100ms for millions of vectors).', category: 'LLMOps' },
+  { id: 'llmops-12', term: 'GDPR right to explanation', definition: 'Users must be able to understand how automated AI decisions are made, challenging for black-box LLMs.', category: 'LLMOps' },
+  { id: 'llmops-13', term: 'Red-teaming purpose', definition: 'Simulates malicious attacks and adversarial inputs to stress-test AI system safety, security, and robustness.', category: 'LLMOps' },
+  { id: 'llmops-14', term: 'RLHF three stages', definition: 'Supervised Fine-Tuning (SFT), Reward Model training, and Reinforcement Learning optimization.', category: 'LLMOps' },
+  { id: 'llmops-15', term: 'Canary deployment', definition: 'Gradual rollout strategy that tests new models with small traffic subsets before full deployment.', category: 'LLMOps' }
 ];
 
 export const flashcardCategories = [
@@ -75,8 +109,10 @@ export const flashcardCategories = [
   'Cloud', 
   'DB',
   'Design',
+  'GenAI',
   'HTTP',
   'Kafka',
+  'LLMOps',
   'Network',
   'Reliability',
   'Security'

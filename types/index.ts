@@ -139,7 +139,7 @@ export interface CaseStudy {
   content: CaseStudyContent;
 }
 
-export type Category = 'All' | 'Fundamentals' | 'Networking & Infrastructure' | 'Databases & Data Management' | 'Architecture & Communication' | 'Components' | 'Patterns' | 'Best Practices' | 'Interview Process' | 'Case Studies' | 'Study Plans' | 'Flashcards' | 'Resources';
+export type Category = 'All' | 'Fundamentals' | 'Networking & Infrastructure' | 'Databases & Data Management' | 'Architecture & Communication' | 'Components' | 'Patterns' | 'Best Practices' | 'GenAI & LLM' | 'LLMOps' | 'Interview Process' | 'Case Studies' | 'Study Plans' | 'Flashcards' | 'Resources';
 
 export interface ModalProps {
   isOpen: boolean;

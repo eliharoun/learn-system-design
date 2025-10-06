@@ -37,10 +37,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-12">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Master System Design
+            Master System Design & GenAI
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Learn essential concepts, patterns, and best practices for building distributed systems. 
+            Learn essential concepts for distributed systems, LLM architectures, prompt engineering, RAG systems, and production-ready GenAI deployment.
           </p>
         </div>
 

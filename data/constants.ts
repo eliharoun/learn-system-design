@@ -10,6 +10,8 @@ export const categories: Category[] = [
   'Components', 
   'Patterns', 
   'Best Practices',
+  'GenAI & LLM',
+  'LLMOps',
   'Case Studies',
   'Study Plans',
   'Flashcards',
@@ -25,6 +27,8 @@ export const categoryDescriptions: { [key in Category]?: string } = {
   'Components': 'Reusable system components like caches, proxies, and data structures',
   'Patterns': 'Design patterns and architectural approaches for building robust systems',
   'Best Practices': 'Industry best practices for security, API design, and system reliability',
+  'GenAI & LLM': 'Large Language Models, transformers, prompt engineering, and AI agent systems',
+  'LLMOps': 'Production deployment, monitoring, and operational practices for LLM systems',
   'Interview Process': 'Strategies and methodologies for succeeding in system design interviews',
   'Case Studies': 'Real-world system design examples and implementations',
   'Study Plans': 'Structured learning journeys to master system design at your own pace',
@@ -41,6 +45,8 @@ export const categoryIcons: { [key in Category]?: string } = {
   'Components': 'puzzle',
   'Patterns': 'grid',
   'Best Practices': 'shield',
+  'GenAI & LLM': 'brain',
+  'LLMOps': 'settings',
   'Interview Process': 'users',
   'Study Plans': 'map'
 };

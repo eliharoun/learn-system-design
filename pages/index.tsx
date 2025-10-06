@@ -14,12 +14,10 @@ import {
 } from '../components';
 import { TabbedTopicsSection } from '../components/TabbedTopicsSection';
 import { LearningPathComponent } from '../components/LearningPath';
-import { ProgressTracker } from '../components/ProgressTracker';
 import { SEO, generateWebsiteStructuredData } from '../components/SEO';
 import { interviewSteps, topics, caseStudies, categories, resourceCategories } from '../data';
 import { learningPaths } from '../data/learningPaths';
 import { useProgress } from '../hooks/useProgress';
-import { filterItems } from '../utils';
 import { Category, Topic, CaseStudy, InterviewStep } from '../types';
 
 export default function SystemDesignLearning() {
@@ -30,7 +28,6 @@ export default function SystemDesignLearning() {
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [showLearningPaths, setShowLearningPaths] = useState(false);
 
   const progress = useProgress();
 
@@ -83,7 +80,30 @@ export default function SystemDesignLearning() {
           'NoSQL databases',
           'API design',
           'circuit breaker',
-          'rate limiting'
+          'rate limiting',
+          'GenAI',
+          'LLM',
+          'large language models',
+          'transformer architecture',
+          'attention mechanisms',
+          'prompt engineering',
+          'fine-tuning',
+          'LoRA',
+          'QLoRA',
+          'RAG',
+          'retrieval augmented generation',
+          'vector databases',
+          'agentic AI',
+          'LLMOps',
+          'model deployment',
+          'hallucination detection',
+          'RLHF',
+          'tokenization',
+          'embeddings',
+          'model optimization',
+          'AI safety',
+          'model context protocol',
+          'MCP'
         ]}
       />
       
