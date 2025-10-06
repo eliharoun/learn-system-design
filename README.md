@@ -1,6 +1,6 @@
 # 🚀 InterviewPro Club - System Design & AI/ML Learning Platform
 
-> A comprehensive system design and AI/ML learning platform with 60+ topics, 82 interactive diagrams, and real-world case studies. Complete integration of system design, machine learning theory, and LLM/GenAI content for modern technical interview preparation.
+> A comprehensive system design and AI/ML learning platform with 60+ topics, 82 interactive diagrams, and 24 real-world case studies. Complete integration of system design, machine learning theory, and LLM/GenAI content for modern technical interview preparation.
 
 <div align="center">
 
@@ -87,9 +87,11 @@ Operational excellence for AI systems in production:
 - **Vector Databases** - Pinecone, Weaviate, Chroma for RAG and similarity search
 - **Privacy & Compliance** - GDPR, security best practices, and regulatory compliance
 
-### 🏗️ **Case Studies** (11 Real-World Systems)
-Deep dives into how major tech companies built their systems:
+### 🏗️ **Case Studies** (24 Real-World Systems)
+Deep dives into how major tech companies built their systems, now organized by category with filtering:
 
+#### **🔧 System Design Case Studies** (11 studies)
+Traditional distributed systems and scalable architectures:
 - **WhatsApp** - Real-time messaging at 2 billion users
 - **Netflix** - Video streaming and content delivery at global scale
 - **Uber** - Real-time ride matching and location services
@@ -101,6 +103,41 @@ Deep dives into how major tech companies built their systems:
 - **Typeahead Suggestion** - Real-time search suggestions
 - **API Rate Limiter** - Request throttling system
 - **Web Crawler** - Large-scale web indexing system
+
+#### **🤖 Machine Learning Case Studies** (9 studies)
+Real-world ML systems at scale from industry leaders:
+- **Stripe Radar** - Real-time fraud detection with sub-100ms response (Multi-branch DNN)
+- **Walmart Fashion** - Complete outfit recommendations using CLIP embeddings
+- **Uber Airport Forecasting** - Demand prediction with three-model architecture
+- **Pinterest Churn Prevention** - 14-day advertiser churn prediction with LightGBM
+- **Swiggy Food Recommendations** - Geographic food cart recommendations with ANN
+- **Lyft Ride Mode** - Multi-layer recommendation system balancing business goals
+- **Zalando Fashion Forecasting** - Global deep learning for fashion demand
+- **LinkedIn Payment Routing** - ML-driven gateway optimization with IPW sampling
+- **Wayfair Delivery Prediction** - Quantile regression for delivery date accuracy
+- **LinkedIn Spam Detection** - Two-defense architecture for viral content
+- **Zillow Neural Zestimate** - National-scale neural network for home valuation
+- **Etsy Multi-Task Ranker** - Consolidating hundreds of rankers with MMOE
+- **Instacart Item Availability** - Hierarchical G-T-R architecture for real-time predictions
+
+#### **🧠 AI/LLM Case Studies** (4 studies)
+Large Language Models and generative AI systems in production:
+- **Stitch Fix Generative AI** - Expert-in-the-loop content creation with GPT-3
+- **Microsoft LLM Incident Management** - Multi-task learning for cloud incident resolution
+- **GitHub Copilot** - AI pair programmer with advanced prompt engineering
+- **Honeycomb Query Generation** - Natural language to query syntax conversion
+- **Yelp Content Organization** - Multi-modal embeddings with Universal Sentence Encoder + CLIP
+- **Airbnb Guest Interest** - NER + entity mapping for unstructured text understanding
+
+#### **⚙️ MLOps Case Studies** (1 study)
+ML operations and infrastructure at scale:
+- **Foodpanda A/B Testing** - Apache Airflow for systematic menu ranking experiments
+
+**🎛️ Case Study Filtering**
+- Filter by category: System Design, Machine Learning, AI/LLM, MLOps
+- Filter by difficulty: Easy, Medium, Hard
+- Smart search across all case studies
+- Hierarchical navigation with expandable topic groups
 
 ### � **Interview Process** (7-Step Methodology)
 Master the systematic approach used at top tech companies:

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Topic, CaseStudy, Category } from '../types';
+import { Topic, CaseStudy, Category, CaseStudyCategory } from '../types';
 import { TopicCard } from './TopicCard';
+import { CaseStudyFilter } from './CaseStudyFilter';
 import { categories } from '../data';
+import { caseStudyCategories } from '../data/categories/caseStudies';
 
 interface TabbedTopicsSectionProps {
   topics: Topic[];
@@ -22,14 +24,25 @@ export const TabbedTopicsSection: React.FC<TabbedTopicsSectionProps> = ({
   onCaseClick,
   isVisible
 }) => {
+  const [selectedCaseStudyCategory, setSelectedCaseStudyCategory] = useState<CaseStudyCategory | 'All'>('All');
+
   // Filter items based on selected category from HeroSection and search query
   const allItems = [...topics, ...caseStudies];
   const filteredItems = allItems.filter(item => {
     const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          item.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+    
+    // Additional filtering for case studies by case study category
+    const matchesCaseStudyCategory = !('caseStudyCategory' in item) || 
+                                   selectedCaseStudyCategory === 'All' || 
+                                   item.caseStudyCategory === selectedCaseStudyCategory;
+    
+    return matchesCategory && matchesSearch && matchesCaseStudyCategory;
   });
+
+  // Show case study filter only when Case Studies category is selected
+  const showCaseStudyFilter = selectedCategory === 'Case Studies';
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -44,6 +57,15 @@ export const TabbedTopicsSection: React.FC<TabbedTopicsSectionProps> = ({
                 {selectedCategory !== 'All' && ` in ${selectedCategory}`}
               </p>
             </div>
+          )}
+
+          {/* Case Study Filter */}
+          {showCaseStudyFilter && (
+            <CaseStudyFilter
+              selectedCaseStudyCategory={selectedCaseStudyCategory}
+              onCaseStudyCategoryChange={setSelectedCaseStudyCategory}
+              caseStudyCategories={caseStudyCategories}
+            />
           )}
 
           {/* Topics Grid */}

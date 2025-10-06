@@ -128,10 +128,13 @@ export interface EnhancedCaseStudyContent {
   relatedTopics: string[];
 }
 
+export type CaseStudyCategory = 'System Design' | 'Machine Learning' | 'AI/LLM' | 'MLOps' | 'Data Engineering';
+
 export interface CaseStudy {
   id: string;
   title: string;
   category: string;
+  caseStudyCategory: CaseStudyCategory;
   icon: LucideIcon;
   color: string;
   difficulty: 'Easy' | 'Medium' | 'Hard';
