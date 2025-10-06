@@ -101,7 +101,7 @@ export const FlashcardStudy: React.FC<FlashcardStudyProps> = ({ flashcards, cate
               onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg shadow-purple-500/50'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
             >

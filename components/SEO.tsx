@@ -12,8 +12,8 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = 'InterviewPro Club - Learn System Design & Ace Interviews',
-  description = 'Master system design, GenAI, and LLMOps with comprehensive topics, real-world case studies, and interactive diagrams. Learn everything from distributed systems to transformer architecture, RAG systems, and AI deployment strategies. Perfect for interview preparation and professional development.',
+  title = 'InterviewPro Club - System Design & AI/ML Learning Platform',
+  description = 'Master system design, AI theory, and machine learning with comprehensive topics, real-world case studies, and interactive diagrams. Learn everything from distributed systems to transformer architecture, RAG systems, LLMOps, and AI deployment strategies. Perfect for interview preparation and professional development.',
   keywords = [
     'system design',
     'software architecture',
@@ -25,6 +25,11 @@ export const SEO: React.FC<SEOProps> = ({
     'software engineering',
     'tech interview prep',
     'system architecture',
+    'machine learning',
+    'ml theory',
+    'deep learning',
+    'neural networks',
+    'artificial intelligence',
     'generative ai',
     'large language models',
     'llm',
@@ -46,7 +51,17 @@ export const SEO: React.FC<SEOProps> = ({
     'model optimization',
     'quantization',
     'peft',
-    'lora'
+    'lora',
+    'backpropagation',
+    'gradient descent',
+    'overfitting',
+    'regularization',
+    'cross validation',
+    'feature engineering',
+    'model evaluation',
+    'supervised learning',
+    'unsupervised learning',
+    'reinforcement learning'
   ],
   ogImage = '/og-image.png',
   ogType = 'website',
@@ -163,7 +178,7 @@ export const generateWebsiteStructuredData = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "InterviewPro Club",
-  "description": "Master system design, GenAI, and LLMOps with comprehensive topics, real-world case studies, and interactive diagrams. Learn everything from distributed systems to transformer architecture, RAG systems, and AI deployment strategies.",
+  "description": "System design and AI/ML learning platform. Master distributed systems, machine learning theory, GenAI, and LLMOps with comprehensive topics, real-world case studies, and interactive diagrams. Perfect for interview preparation and professional development.",
   "url": "https://www.interviewpro.club",
   "potentialAction": {
     "@type": "SearchAction",

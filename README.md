@@ -1,6 +1,6 @@
-# 🚀 InterviewPro Club
+# 🚀 InterviewPro Club - System Design & AI/ML Learning Platform
 
-> A comprehensive system design and GenAI learning platform with 60+ topics, 82 interactive diagrams, and real-world case studies. Complete integration of system design and LLM/GenAI content for modern technical interview preparation.
+> A comprehensive system design and AI/ML learning platform with 60+ topics, 82 interactive diagrams, and real-world case studies. Complete integration of system design, machine learning theory, and LLM/GenAI content for modern technical interview preparation.
 
 <div align="center">
 
@@ -16,7 +16,7 @@
 
 ## 🌟 What is InterviewPro Club?
 
-InterviewPro Club is a comprehensive learning platform that helps you master both system design and GenAI/LLM concepts through interactive content, visual diagrams, and real-world case studies. Whether you're preparing for technical interviews at AI-first companies or advancing your engineering skills in the modern AI era, this platform provides everything you need to understand how large-scale systems and AI applications are built and operated.
+InterviewPro Club is a comprehensive system design and AI/ML learning platform that helps you master distributed systems, machine learning theory, and GenAI/LLM concepts through interactive content, visual diagrams, and real-world case studies. Whether you're preparing for technical interviews at AI-first companies or advancing your engineering skills in the modern AI era, this platform provides everything you need to understand how large-scale systems and AI applications are built and operated.
 
 ## 📚 Platform Sections
 
