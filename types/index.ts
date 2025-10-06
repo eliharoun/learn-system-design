@@ -141,6 +141,15 @@ export interface CaseStudy {
 
 export type Category = 'All' | 'Fundamentals' | 'Networking & Infrastructure' | 'Databases & Data Management' | 'Architecture & Communication' | 'Components' | 'Patterns' | 'Best Practices' | 'GenAI & LLM' | 'LLMOps' | 'Interview Process' | 'Case Studies' | 'Study Plans' | 'Flashcards' | 'Resources';
 
+export interface CategoryGroup {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  subcategories: Category[];
+}
+
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;

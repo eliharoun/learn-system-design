@@ -1,4 +1,4 @@
-import { Category } from '../types';
+import { Category, CategoryGroup } from '../types';
 
 export const categories: Category[] = [
   'All', 
@@ -12,6 +12,59 @@ export const categories: Category[] = [
   'Best Practices',
   'GenAI & LLM',
   'LLMOps',
+  'Case Studies',
+  'Study Plans',
+  'Flashcards',
+  'Resources'
+];
+
+// Hierarchical category groups for improved UX
+export const categoryGroups: CategoryGroup[] = [
+  {
+    id: 'system-design',
+    title: 'System Design',
+    description: 'Core system design concepts, patterns, and architectural principles',
+    icon: 'layers',
+    color: 'from-blue-500 to-cyan-500',
+    subcategories: [
+      'Interview Process',
+      'Fundamentals', 
+      'Networking & Infrastructure', 
+      'Databases & Data Management', 
+      'Architecture & Communication', 
+      'Components', 
+      'Patterns', 
+      'Best Practices'
+    ]
+  },
+  {
+    id: 'ai-ml',
+    title: 'AI & Machine Learning',
+    description: 'Generative AI, Large Language Models, and production ML systems',
+    icon: 'brain',
+    color: 'from-purple-500 to-pink-500',
+    subcategories: [
+      'GenAI & LLM',
+      'LLMOps'
+    ]
+  }
+];
+
+// Main categories that don't belong to groups
+export const standaloneCategories: Category[] = [
+  'All',
+  'Case Studies',
+  'Study Plans',
+  'Flashcards',
+  'Resources'
+];
+
+// Ordered categories for display (All first, then groups, then other standalone)
+export const orderedStandaloneCategories: Category[] = [
+  'All'
+];
+
+export const orderedStandaloneCategoriesAfterGroups: Category[] = [
   'Case Studies',
   'Study Plans',
   'Flashcards',

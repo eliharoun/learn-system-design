@@ -20,3 +20,4 @@ export { CaseStudyDetailModal } from './modals/CaseStudyDetailModal';
 
 // Enhanced Components
 export { TabbedTopicsSection } from './TabbedTopicsSection';
+export { CategoryGroupSelector } from './CategoryGroupSelector';

@@ -2,6 +2,7 @@ import React from 'react';
 import { Search } from 'lucide-react';
 import { Category } from '../../types';
 import { useAnalytics } from '../../hooks/useAnalytics';
+import { CategoryGroupSelector } from '../CategoryGroupSelector';
 
 interface HeroSectionProps {
   searchQuery: string;
@@ -58,21 +59,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 -mb-16">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => handleCategoryChange(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/50'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+        {/* Category Group Selector */}
+        <div className="-mb-16">
+          <CategoryGroupSelector
+            selectedCategory={selectedCategory}
+            onCategorySelect={handleCategoryChange}
+            searchQuery={searchQuery}
+          />
         </div>
       </div>
     </section>
