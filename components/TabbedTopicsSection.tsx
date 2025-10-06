@@ -94,6 +94,8 @@ const getCategoryDescription = (category: Category): string => {
     'Components': 'Reusable system components like caches, proxies, and data structures that solve common scalability challenges.',
     'Patterns': 'Design patterns and architectural approaches for building robust, scalable systems.',
     'Best Practices': 'Industry best practices for security, API design, and system reliability.',
+    'GenAI & LLM': 'Generative AI and Large Language Model concepts including transformer architecture, attention mechanisms, RAG systems, and prompt engineering.',
+    'LLMOps': 'LLM Operations covering deployment strategies, monitoring, optimization, safety, and production best practices for AI systems.',
     'Interview Process': 'Strategies and methodologies for succeeding in system design interviews.',
     'Case Studies': 'Real-world system design examples and implementations',
     'Study Plans': 'Structured learning journeys to master system design at your own pace',
